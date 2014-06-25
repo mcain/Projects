@@ -19,19 +19,16 @@ namespace Mi9.CodeChallenge.ServiceFactory
 
         public void ProvideFault(Exception error, MessageVersion version, ref Message fault)
         {
-            // Create message
             ServiceFault jsonError = new ServiceFault
             {
                 Error = "Could not decode request: JSON parsing failed",
                 // Detail = error.Message
             };
+           
             fault = Message.CreateMessage(version, "", jsonError, new DataContractJsonSerializer(typeof(ServiceFault)));
-
-            // Tell WCF to use JSON encoding rather than default XML
-            WebBodyFormatMessageProperty wbf = new WebBodyFormatMessageProperty(WebContentFormat.Json);
             fault.Properties.Add(WebBodyFormatMessageProperty.Name, wbf);
 
-            // Modify response
+            WebBodyFormatMessageProperty wbf = new WebBodyFormatMessageProperty(WebContentFormat.Json);
             HttpResponseMessageProperty rmp = new HttpResponseMessageProperty
             {
                 StatusCode = HttpStatusCode.BadRequest,
