@@ -1,0 +1,6 @@
+C:\Users\Matthew\documents\visual studio 2013\Projects\Mi9CodeChallenge\Mi9CodeChallenge\bin\Mi9CodeChallenge.dll.config
+C:\Users\Matthew\documents\visual studio 2013\Projects\Mi9CodeChallenge\Mi9CodeChallenge\bin\Mi9CodeChallenge.dll
+C:\Users\Matthew\documents\visual studio 2013\Projects\Mi9CodeChallenge\Mi9CodeChallenge\bin\Mi9CodeChallenge.pdb
+C:\Users\Matthew\documents\visual studio 2013\Projects\Mi9CodeChallenge\Mi9CodeChallenge\obj\Debug\Mi9CodeChallenge.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\documents\visual studio 2013\Projects\Mi9CodeChallenge\Mi9CodeChallenge\obj\Debug\Mi9CodeChallenge.dll
+C:\Users\Matthew\documents\visual studio 2013\Projects\Mi9CodeChallenge\Mi9CodeChallenge\obj\Debug\Mi9CodeChallenge.pdb
