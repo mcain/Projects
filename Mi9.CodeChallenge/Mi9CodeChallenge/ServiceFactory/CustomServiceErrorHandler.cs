@@ -22,10 +22,10 @@ namespace Mi9.CodeChallenge.ServiceFactory
             // Create message
             ServiceFault jsonError = new ServiceFault
             {
-                Error = "Could not deserialize json data. Bad request",
-                Detail = error.Message
+                Error = "Could not decode request: JSON parsing failed",
+                // Detail = error.Message
             };
-            fault = Message.CreateMessage(version, "", jsonError, new DataContractJsonSerializer(typeof (ServiceFault)));
+            fault = Message.CreateMessage(version, "", jsonError, new DataContractJsonSerializer(typeof(ServiceFault)));
 
             // Tell WCF to use JSON encoding rather than default XML
             WebBodyFormatMessageProperty wbf = new WebBodyFormatMessageProperty(WebContentFormat.Json);
@@ -35,7 +35,7 @@ namespace Mi9.CodeChallenge.ServiceFactory
             HttpResponseMessageProperty rmp = new HttpResponseMessageProperty
             {
                 StatusCode = HttpStatusCode.BadRequest,
-                StatusDescription = "Bad Request"
+                StatusDescription = "Could not decode request: JSON parsing failed"
             };
 
             rmp.Headers[HttpResponseHeader.ContentType] = "application/json";
