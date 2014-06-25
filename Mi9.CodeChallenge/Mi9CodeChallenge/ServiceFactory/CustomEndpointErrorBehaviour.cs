@@ -9,10 +9,10 @@ namespace Mi9.CodeChallenge.ServiceFactory
 {
     public class CustomEndpointErrorBhaviour : WebHttpBehavior
     {
-        protected override void AddServerErrorHandlers(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher)
+        protected override void AddServerErrorHandlers(ServiceEndpoint endpoint, EndpointDispatcher epd)
         {
-            endpointDispatcher.ChannelDispatcher.ErrorHandlers.Clear();
-            endpointDispatcher.ChannelDispatcher.ErrorHandlers.Add(new CustomServiceErrorHandler());
+            epd.ChannelDispatcher.ErrorHandlers.Clear();
+            epd.ChannelDispatcher.ErrorHandlers.Add(new CustomServiceErrorHandler());
         }
     }
 }
