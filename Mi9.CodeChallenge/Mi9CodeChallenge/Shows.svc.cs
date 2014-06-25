@@ -11,15 +11,15 @@ namespace Mi9.CodeChallenge
     [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class Shows : IShows
     {
-        public Response[] ShowsWithDrm(Payload[] payload)
+        public Response[] ShowsWithDrm(Payload[] payload, int skip, int take, int totalRecords)
         {
             return payload.Where(p => p.Drm && (p.EpisodeCount.HasValue && p.EpisodeCount > 0))
-                .Select(p => new Response
-                {
-                    Image = (p.Image == null) ? string.Empty : p.Image.ShowImage,
-                    Slug = p.Slug,
-                    Title = p.Title
-                }).ToArray();
+                          .Select(p => new Response
+                          {
+                              Image = (p.Image == null) ? string.Empty : p.Image.ShowImage,
+                              Slug = p.Slug,
+                              Title = p.Title
+                          }).ToArray();
         }
     }
 }

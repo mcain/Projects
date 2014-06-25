@@ -18,6 +18,6 @@ namespace Mi9.CodeChallenge
             BodyStyle = WebMessageBodyStyle.Wrapped)]
         [OperationContract]
         [return: MessageParameter(Name = "response")]
-        Response[] ShowsWithDrm(Payload[] payload);
+        Response[] ShowsWithDrm(Payload[] payload, int skip, int take, int totalRecords);
     }
 }
