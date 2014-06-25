@@ -11,3 +11,4 @@ C:\Users\Matthew\Documents\Visual Studio 2013\Projects\Projects\Mi9.CodeChalleng
 C:\Users\Matthew\Documents\Visual Studio 2013\Projects\Projects\Mi9.CodeChallenge\Mi9CodeChallenge\bin\Mi9.CodeChallenge.pdb
 C:\Users\Matthew\Documents\Visual Studio 2013\Projects\Projects\Mi9.CodeChallenge\Mi9CodeChallenge\obj\Debug\Mi9.CodeChallenge.dll
 C:\Users\Matthew\Documents\Visual Studio 2013\Projects\Projects\Mi9.CodeChallenge\Mi9CodeChallenge\obj\Debug\Mi9.CodeChallenge.pdb
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\Projects\Mi9.CodeChallenge\Mi9CodeChallenge\obj\Debug\Mi9.CodeChallenge.csprojResolveAssemblyReference.cache

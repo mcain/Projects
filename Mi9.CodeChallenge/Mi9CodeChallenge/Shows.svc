@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Mi9.CodeChallenge.Shows" Factory="Mi9.CodeChallenge.ServiceFactory.CustomServiceFactory" CodeBehind="Shows.svc.cs" %>

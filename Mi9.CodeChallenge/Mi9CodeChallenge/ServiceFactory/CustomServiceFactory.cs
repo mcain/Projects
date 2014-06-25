@@ -13,8 +13,8 @@ namespace Mi9.CodeChallenge.ServiceFactory
     {
         public override ServiceHostBase CreateServiceHost(string constructorString, Uri[] baseAddresses)
         {
-            ServiceHost host = base.CreateServiceHost(typeof (Shows), baseAddresses);
-            host.AddServiceEndpoint(typeof (IShows), new WebHttpBinding(), string.Empty);
+            ServiceHost host = base.CreateServiceHost(typeof(Shows), baseAddresses);
+            host.AddServiceEndpoint(typeof(IShows), new WebHttpBinding(), string.Empty);
             host.Description
                 .Endpoints
                 .ToList()
