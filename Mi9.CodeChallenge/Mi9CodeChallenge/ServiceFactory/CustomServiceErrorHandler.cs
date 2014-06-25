@@ -24,11 +24,11 @@ namespace Mi9.CodeChallenge.ServiceFactory
                 Error = "Could not decode request: JSON parsing failed",
                 // Detail = error.Message
             };
-           
-            fault = Message.CreateMessage(version, "", jsonError, new DataContractJsonSerializer(typeof(ServiceFault)));
-            fault.Properties.Add(WebBodyFormatMessageProperty.Name, wbf);
 
             WebBodyFormatMessageProperty wbf = new WebBodyFormatMessageProperty(WebContentFormat.Json);
+            fault = Message.CreateMessage(version, "", jsonError, new DataContractJsonSerializer(typeof(ServiceFault)));
+
+            fault.Properties.Add(WebBodyFormatMessageProperty.Name, wbf);
             HttpResponseMessageProperty rmp = new HttpResponseMessageProperty
             {
                 StatusCode = HttpStatusCode.BadRequest,
